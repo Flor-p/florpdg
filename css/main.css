@@ -5,7 +5,7 @@
 
 body {
     background-color: #fff;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     line-height: 21px;
 	font-size: 13px;
     color: #1d1e1f;
@@ -46,7 +46,7 @@ a:focus, a:hover {
 
 h1, h2, h3,
 h4, h5, h6 {
-	font-weight: normal;
+	font-weight: 300;
 	margin: 0;
 }
 
@@ -197,19 +197,19 @@ body > section,
 }
 
 .carousel-caption h2 span {
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .carousel-caption h3 {
   font-size: 48px;
-  font-weight: 300;
+  font-weight: 500;
   margin: 6px 0 20px;
 }
 
 .carousel-caption p {
   color: #fff;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .carousel-caption p:before,
@@ -272,8 +272,12 @@ top: -8px;
 	Features
 ==========================================*/
 
-.features {
-  background-color: #ffffff;
+.portfolio {
+  margin-top: -60px;
+  margin-bottom: -60px;
+  font-weight: 600;
+
+
 }
 
 .owl-controls {
@@ -318,7 +322,7 @@ top: -8px;
 .service-desc h3 {
   color:#000000;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 300;
   margin-bottom: 25px;
 }
 
@@ -421,7 +425,7 @@ top: -8px;
 
 .work-item .overlay h4 {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 300;
   line-height: 24px;
   margin: 25px 0 8px;
 }
@@ -440,14 +444,16 @@ top: -8px;
 ==========================================*/
 
 .contact {
-	padding-bottom: 0;
+padding-bottom: 0px;
 }
 
 .contact-address h3 {
   color: #000000;
-  font-size: 22px;
-  line-height: 32px;
-  margin-bottom: 25px;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-top: 5px;
+  margin-bottom: 65px;
 }
 
 .contact-address p {
@@ -458,8 +464,8 @@ top: -8px;
 
 .contact-form h3 {
   color: #000000;
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 34px;
+  font-weight: 500;
   line-height: 32px;
   margin-bottom: 25px;
 }
@@ -537,12 +543,12 @@ label.error {
 }
 
 .footer a:hover {
-  color: #B91B59;
+  color: #ff0066;
 }
 
 .footer h6 {
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: 500;
   line-height: 24px;
   margin-bottom: 30px;
 }
