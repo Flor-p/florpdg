@@ -4,11 +4,11 @@
 /* =================================== */
 
 body {
-    background-color: #fff;
+    background-color: #ffffff;
     font-family: 'Rajdhani', sans-serif;
     line-height: 21px;
-	font-size: 13px;
-    color: #1d1e1f;
+	font-size: 18px;
+    color: #000000;
 }
 
 ol, ul {
@@ -192,8 +192,8 @@ body > section,
 }
 
 .carousel-caption h2 {
-  font-size: 62px;
-  font-weight: 300;
+  font-size: 56px;
+  font-weight: 200;
 }
 
 .carousel-caption h2 span {
@@ -201,15 +201,21 @@ body > section,
 }
 
 .carousel-caption h3 {
-  font-size: 48px;
-  font-weight: 500;
+  font-size: 36px;
+  font-weight: 400;
+  margin: 6px 0 20px;
+}
+
+.carousel-caption h4 {
+  font-size: 26px;
+  font-weight: 200;
   margin: 6px 0 20px;
 }
 
 .carousel-caption p {
   color: #fff;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 200;
 }
 
 .carousel-caption p:before,
@@ -445,7 +451,7 @@ top: -8px;
 
 .contact {
 padding-bottom: 0px;
-background-color: rgb(216, 216, 216);
+background-color: rgb(255, 255, 255);
 
 }
 
@@ -598,7 +604,7 @@ label.error {
 }
 
 .credit a {
-  color: #B91B59ss;
+  color: #fff;
 }
 
 .credit a:hover {
