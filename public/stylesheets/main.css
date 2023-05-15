@@ -73,7 +73,7 @@ body > section,
 	padding: 70px 0;
 }
 
-.sec-title {}
+
 
 .sec-title h2 {
   color: #000000;
@@ -468,7 +468,7 @@ background-color: rgb(255, 255, 255);
   line-height: 24px;
 }
 
-.contact-form {}
+
 
 .contact-form h3 {
   color: #000000;
@@ -592,8 +592,7 @@ label.error {
   line-height: 24px;
 }
 
-.footer-single ul {
-  }
+
 
 .footer-single li {
   line-height: 32px;
