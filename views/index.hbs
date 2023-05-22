@@ -441,20 +441,21 @@
                     <form action="/" method="post">
                         <div class="input-group name-email">
                             <div class="input-field">
-                                <input type="text" name="name" id="name" placeholder="Name" class="form-control">
+                                <input type="text" id="name" name="name" placeholder="name" class="form-control">
                             </div>
                             <div class="input-field">
-                                <input type="email" name="email" id="email" placeholder="Email" class="form-control">
+                                <input type="email" id="email" name="email"  placeholder="email" class="form-control">
                             </div>
                         </div>
                         <div class="input-group">
-                            <textarea name="message" id="message" placeholder="Message" class="form-control"></textarea>
+                            <textarea id="message" name="message" placeholder="message" class="form-control"></textarea>
                         </div>
                         <div class="input-group">
                             <input type="submit" id="form-submit" class="pull-right" value="Send message">
                         </div>
                     </form>
-                </div>
+                    <p>{{message}}</p>
+            </div>
             </div>
             <!-- end contact form -->
 
