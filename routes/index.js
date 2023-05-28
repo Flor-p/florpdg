@@ -35,7 +35,7 @@ res.render ('contacto', {
   message: 'Mensaje enviado correctamente'
 })
 
- });
+ })
 
 
 
