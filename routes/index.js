@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.post('/', async (req, res, next) => {
+router.post('/', async(req, res, next) => {
 console.log (req.body) //estoy capturando datos?
 
  var name = req.body.name;
@@ -28,14 +28,14 @@ var transport = nodemailer.createTransport({
   pass: process.env.SMTP_PASS,
  }
 
-})
+});
 
 var info = await transport.sendMail(obj);
 res.render ('contacto', { 
   message: 'Mensaje enviado correctamente'
-})
+});
 
- })
+ });
 
 
 
