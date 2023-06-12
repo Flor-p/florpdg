@@ -512,7 +512,7 @@ label.error {
 }
 
 .contact-form #form-submit {
-  background: url("../img/envelop.png") no-repeat scroll 0 15px transparent;
+  background: url("/public/images/") no-repeat scroll 0 15px transparent;
   border: 0 none;
   color: #000;
   font-size: 16px;
@@ -532,10 +532,7 @@ label.error {
   margin-bottom: 10px;
 }
 
-#map_canvas {
-  height: 215px;
-  width: 100%;
-}
+
 
 
 
