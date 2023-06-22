@@ -9,8 +9,8 @@ require('dotenv').config();
 var pool = require('./models/bd');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var loginRouter = require('./routes/admin/login')
+//var usersRouter = require('./routes/users');
+//var loginRouter = require('./routes/admin/login')
 
 var app = express();
 // view engine setup
@@ -24,14 +24,54 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/admin/login', loginRouter);
+//app.use('/users', usersRouter);
+//app.use('/admin/login', loginRouter);
 
 
 //select
-pool.query("select * from empleados").then(function(resultados){
+pool.query("select * from clientes").then(function(resultados){
   console.log(resultados);
 });
+
+//INSERT
+
+//var pool = require('./bd');
+
+//var obj = {
+  //  nombre:'Florencia',
+   // apellido: 'Paramidani'
+
+//}
+
+//pool.query("insert into clientes set ?", [obj]).then(function(resultados) {
+  //  console.log(resultados);
+//});
+
+
+//UPDATE
+
+//var pool = require('./bd');
+//var id = 1;
+//var obj = {
+ // nombre:'Florencia',
+ // apellido: 'Paramidani'
+
+//}
+//pool.query("update clientes set ? where id=?", [obj, id]).then(function(resultados) {
+  //  console.log(resultados);
+//});
+
+
+
+//DELETE
+
+//var pool = require('./bd');
+//var id = 1;
+
+//pool.query("delete from clientes where id = ?", [id]).then(function(resultados) {
+   // console.log(resultados);
+//});
+
 
 
 // catch 404 and forward to error handler
