@@ -37,40 +37,44 @@ pool.query("select * from clientes").then(function(resultados){
 
 //var pool = require('./bd');
 
-//var obj = {
-  //  nombre:'Florencia',
-   // apellido: 'Paramidani'
+var obj = {
+id:'9',
+nombre:'Gabriel',
+apellido:'Paramidani',
+edad:'55',
+email:'gparamidani@gmail.com',
+celular:'1150608361'
+}
 
-//}
-
-//pool.query("insert into clientes set ?", [obj]).then(function(resultados) {
-  //  console.log(resultados);
-//});
-
+pool.query("insert into clientes set ?", [obj]).then(function(resultados){
+console.log(resultados);
+});
 
 //UPDATE
 
-//var pool = require('./bd');
-//var id = 1;
-//var obj = {
- // nombre:'Florencia',
- // apellido: 'Paramidani'
+var id = 1;
+var obj = {
+id:'1',
+nombre:'Florencia',
+apellido:'Paramidani',
+edad:'49',
+email:'florparamidani@gmail.com',
+celular:'1150608361'
+}
 
-//}
-//pool.query("update clientes set ? where id=?", [obj, id]).then(function(resultados) {
-  //  console.log(resultados);
-//});
 
+pool.query("update clientes set ? where id=?", [obj, id]).then(function(resultados){
+console.log(resultados);
+});
 
 
 //DELETE
 
-//var pool = require('./bd');
-//var id = 1;
+var id = 1;
 
-//pool.query("delete from clientes where id = ?", [id]).then(function(resultados) {
-   // console.log(resultados);
-//});
+pool.query("delete from clientes where id=?", [id]).then(function(resultados){
+console.log(resultados);
+});
 
 
 
