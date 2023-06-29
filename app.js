@@ -6,11 +6,13 @@ var logger = require('morgan');
 
 
 require('dotenv').config();
+var session = require('express-session');
 var pool = require('./models/bd');
 
 var indexRouter = require('./routes/index');
-//var usersRouter = require('./routes/users');
-//var loginRouter = require('./routes/admin/login')
+var usersRouter = require('./routes/users');
+var loginRouter = require('./routes/admin/login');
+var adminRouter = require('./routes/admin/novedades');
 
 var app = express();
 // view engine setup
@@ -22,59 +24,60 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({
+  secret:'81dc9bdb52d04dc20036dbd8313ed055',
+  resave: false,
+  saveUninitialized: true
+}))
+
+const secured = async (req, res, next) => {
+  try {
+    console.log(req.session.id_usuario);
+    if (req.session.id_usuario) {
+      next();
+    } else {
+      res.redirect('/admin/login');
+    }
+  } catch (error) {
+    console.log(error);
+    res.redirect('/admin/login');
+  }
+};
 
 app.use('/', indexRouter);
-//app.use('/users', usersRouter);
-//app.use('/admin/login', loginRouter);
+app.use('/users', usersRouter);
+app.use('/admin/login', loginRouter);
+app.use('/admin/novedades' , secured, adminRouter);
 
 
-//select
-pool.query("select * from clientes").then(function(resultados){
-  console.log(resultados);
-});
+//select//
+//pool.query("select * from novedades").then(function(resultados){console.log(resultados);});
 
 //INSERT
 
-//var pool = require('./bd');
+//var obj = {
+//id:'6',
+//titulo:'',
+//subtitulo:'',
+//cuerpo:''}
 
-var obj = {
-id:'9',
-nombre:'Gabriel',
-apellido:'Paramidani',
-edad:'55',
-email:'gparamidani@gmail.com',
-celular:'1150608361'
-}
-
-pool.query("insert into clientes set ?", [obj]).then(function(resultados){
-console.log(resultados);
-});
+//pool.query("insert into novedades set ?", [obj]).then(function(resultados){console.log(resultados);});
 
 //UPDATE
 
-var id = 1;
-var obj = {
-id:'1',
-nombre:'Florencia',
-apellido:'Paramidani',
-edad:'49',
-email:'florparamidani@gmail.com',
-celular:'1150608361'
-}
+//var id = 1;
+//var obj = {
+//id:'1',
+//titulo:'',
+//subtitulo:'',
+//cuerpo:''}
 
-
-pool.query("update clientes set ? where id=?", [obj, id]).then(function(resultados){
-console.log(resultados);
-});
-
+//pool.query("update novedades set ? where id=?", [obj, id]).then(function(resultados){console.log(resultados);});
 
 //DELETE
-
-var id = 1;
-
-pool.query("delete from clientes where id=?", [id]).then(function(resultados){
-console.log(resultados);
-});
+//var id = 1;
+//pool.query("delete from novedades where id=?", [id]).then(function(resultados){
+//console.log(resultados);});
 
 
 

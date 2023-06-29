@@ -60,6 +60,61 @@
 <!--
         End Home SliderEnd
         ==================================== -->
+
+<div id="novedades" class="row py-4">
+    <div class="col-md-5 offset-md-2 py-3">
+        <h2>Novedades</h2>
+    <ul class="lista-novedades">
+        {{#each novedades}}
+        <li>
+            <a href="javascript:void(0);" data-toggle="modal" data-target="#modal{{ id }}">
+            <img src="/images/logo.png"> {{ titulo }}</a>
+    </li>
+    {{/each}}
+    </ul>
+    </div>
+    {{#each novedades}}
+
+<!--inicia modal -->
+
+<div class='modal fade' id="modal{{ id }}" data-
+backdrop="static" data-keyboard="false" tabindex="-1"
+aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+<div class="modal-content">
+ <div class="modal-header"> 
+ <h5 class="modal-title"
+ id="staticBackdropLabel">{{ titulo }}</h5>
+ <button type="button" class="close" data-
+ dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+ </button>
+</div>
+<div class="modal-body">
+    <h2>{{ subtitulo }}</h2>
+    <p>{{cuerpo}}</p>
+</div>
+</div>
+</div>
+</div>
+{{/each}}
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!--
         Portfolio
         ==================================== -->
