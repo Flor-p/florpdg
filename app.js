@@ -24,21 +24,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(session({
-  secret:'81dc9bdb52d04dc20036dbd8313ed055',
-  resave: false,
-  saveUninitialized: true
-}))
 
 const secured = async (req, res, next) => {
   try {
     console.log(req.session.id_usuario);
-    if (req.session.id_usuario) {
+    if (req.session.id_usuario){
       next();
     } else {
       res.redirect('/admin/login');
     }
-  } catch (error) {
+  } catch(error){
     console.log(error);
     res.redirect('/admin/login');
   }
@@ -48,37 +43,6 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin/login', loginRouter);
 app.use('/admin/novedades' , secured, adminRouter);
-
-
-//select//
-//pool.query("select * from novedades").then(function(resultados){console.log(resultados);});
-
-//INSERT
-
-//var obj = {
-//id:'6',
-//titulo:'',
-//subtitulo:'',
-//cuerpo:''}
-
-//pool.query("insert into novedades set ?", [obj]).then(function(resultados){console.log(resultados);});
-
-//UPDATE
-
-//var id = 1;
-//var obj = {
-//id:'1',
-//titulo:'',
-//subtitulo:'',
-//cuerpo:''}
-
-//pool.query("update novedades set ? where id=?", [obj, id]).then(function(resultados){console.log(resultados);});
-
-//DELETE
-//var id = 1;
-//pool.query("delete from novedades where id=?", [id]).then(function(resultados){
-//console.log(resultados);});
-
 
 
 // catch 404 and forward to error handler

@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var usuariosModel = require('./../../models/usuarios.Model')
+var usuariosModel = require('./../../models/usuariosModel')
 
 router.get('/', function(req, res, next) {
-    res.render('admin/login',{ 
-        layout : 'admin/layout'
+    res.render('admin/login', { 
+        layout : 'admin/layout',
     }); 
   });
   
@@ -21,13 +21,10 @@ router.get('/', function(req, res, next) {
       var usuario = req.body.usuario;
       var password = req.body.password;
   
-      var data = await usuariosModel.getUserByUsernameAndPassword(usuario, titulo, subtitulo, cuerpo);
+      var data = await usuariosModel.getUserByUsernameAndPassword(usuario, password);
       if (data != undefined) {
         req.session.id_usuario = data.id;
-        req.session.nombre = data.titulo;
-        req.session.nombre = data.subtitulo;
-        req.session.nombre = data.cuerpo;
-
+        req.session.nombre = data.usuario;
         res.redirect('/admin/novedades');
         
       } else {
