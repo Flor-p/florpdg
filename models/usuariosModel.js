@@ -14,3 +14,4 @@ async function getUserByUsernameAndPassword(user, password) {
 }
 
 module.exports = { getUserByUsernameAndPassword }
+

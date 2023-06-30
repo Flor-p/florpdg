@@ -4,20 +4,16 @@ var nodemailer = require('nodemailer');
 var novedadesModel = require('../models/novedadesModel');
 
 /* GET home page. */
-
 router.get('/', async function(req, res, next) {
-  novedades = await novedadesModel.getNovedades();
+
+  var novedades = await novedadesModel.getNovedades();
   novedades = novedades.splice(0,5);
-  res.render('index',{
-      novedades
-  });
+  res.render('index', { 
+    novedades
+   })
+
 });
 
-
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
 
 router.post('/', async(req, res, next) => {
 console.log (req.body) //estoy capturando datos?
