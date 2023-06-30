@@ -21,7 +21,9 @@ router.get('/', function(req, res, next) {
       var usuario = req.body.usuario;
       var password = req.body.password;
   
-      var data = await usuariosModel.getUserByUsernameAndPassword(usuario, password);
+      var data = await usuariosModel.getUserByUsernameAndPassword
+      (usuario, password);
+
       if (data != undefined) {
         req.session.id_usuario = data.id;
         req.session.nombre = data.usuario;
