@@ -1,0 +1,554 @@
+<!--
+        Home Slider
+        ==================================== -->
+
+<section id="slider">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators bullet -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        </ol>
+        <!-- End Indicators bullet -->
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+
+            <!-- single slide -->
+            <div class="item active" style="background-image: url(/images/banner_1.jpg);">
+                <div class="carousel-caption">
+                    <h2 data-wow-duration="2s" data-wow-delay="2s" class="wow bounceInDown animated">
+                        Hola, soy<span> Flor Paramidani</span></h2>
+                    <h3 data-wow-duration="2s" class="wow slideInLeft animated"><span class="color">/Diseñador
+                            gráfico+Frontend developer+AI Midjourney</span> </h3>
+                    <h4 data-wow-duration="2s" class="wow slideInRight animated color"><span class=> </h4>
+
+                    <ul class="social-links text-center">
+                        <li><a href="https://twitter.com/ParamidaniFlor"><i class="fa-brands fa-twitter"></i></a>
+                        </li>
+                        <li><a href="https://www.instagram.com/florpdg/"><i class="fa-brands fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end single slide -->
+            <!-- single slide -->
+            <div class="item" style="background-image: url(/images/banner_2.jpg);">
+                <div class="carousel-caption">
+                    <h2 data-wow-duration="2s" data-wow-delay="2s" class="wow bounceInDown animated">
+                        <span> </span>
+                    </h2>
+                    <h3 data-wow-duration="2s" class="wow slideInLeft animated"><span class="color">/Sobre mí</span>
+                    </h3>
+                    <h2 data-wow-duration="2s" class="wow slideInRight animated">
+                        <a href="/images/CV FLORENCIA PARAMIDANI 2023.pdf">Mirá mi CV</a>
+                    </h2>
+
+                    <ul class="social-links text-center">
+                        <li><a href="https://twitter.com/ParamidaniFlor"><i class="fa-brands fa-twitter"></i></a>
+                        </li>
+                        <li><a href="https://www.instagram.com/florpdg/"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end single slide -->
+        </div>
+        <!-- End Wrapper for slides -->
+    </div>
+</section>
+<!--
+        End Home SliderEnd
+        ==================================== -->
+
+<div id="novedades" class="row py-4">
+    <div class="col-md-5 offset-md-2 py-3">
+        <h1>Novedades</h1>
+    <ul class="lista-novedades">
+        {{#each novedades}}
+        <li>
+            <a href="javascript:void(0);" data-toggle="modal" data-target="#modal{{ id }}">
+            <img src="/images/iso-lgtbiq.png"> {{ titulo }}</a>
+    </li>
+    {{/each}}
+    </ul>
+    </div>
+    {{#each novedades}}
+
+<!--inicia modal -->
+
+<div class='modal fade' id="modal{{ id }}" data-
+backdrop="static" data-keyboard="false" tabindex="-1"
+aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+<div class="modal-content">
+ <div class="modal-header"> 
+ <h5 class="modal-title"
+ id="staticBackdropLabel">{{ titulo }}</h5>
+ <button type="button" class="close" data-
+ dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+ </button>
+</div>
+<div class="modal-body">
+    <h2>{{ subtitulo }}</h2>
+    <p>{{cuerpo}}</p>
+</div>
+</div>
+</div>
+</div>
+{{/each}}
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+        Portfolio
+        ==================================== -->
+<section id="portfolio" class="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="sec-title text-center">
+                <h1>Portfolio</h1>
+            </div>
+        </div>
+</section>
+
+<div class="sec-sub-title text-center">
+    <p></p>
+</div>
+<div class="work-filter wow fadeInRight animated" data-wow-duration="500ms">
+    <ul class="text-center">
+        <li><a href="javascript:;" data-filter="all" class="active filter">All</a></li>
+        <li><a href="javascript:;" data-filter=".branding" class="filter">BRANDING</a></li>
+        <li><a href="javascript:;" data-filter=".illustration" class="filter">ILLUSTRATION VECTOR</a></li>
+        <li><a href="javascript:;" data-filter=".ai" class="filter">AI MIDJOURNEY</a></li>
+    </ul>
+</div>
+</div>
+</div>
+<div class="project-wrapper">
+    <figure class="mix work-item branding">
+        <img src="/images/works/item-1.jpg" alt="portfolio flor paramidani">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-1.jpg"><i class="fa-solid fa-face-smile fa-lg"></i></a>
+            <h4>Client</h4>
+            <p>IG: @inc.sound</p>
+        </figcaption>
+    </figure>
+    <figure class="mix work-item branding">
+        <img src="/images/works/item-2.jpg" alt="branding">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-2.jpg"><i class="fa-solid fa-face-smile fa-lg"></i></a>
+            <h4>Client</h4>
+            <p>IG: @_shols</p>
+        </figcaption>
+    </figure>
+
+    <figure class="mix work-item branding">
+        <img src="/images/works/item-3.jpg" alt="branding">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-3.jpg"><i
+                    class="fa-solid fa-face-smile fa-lg"></i></a>
+            <h4>Client</h4>
+            <p>IG: @arteconache</p>
+        </figcaption>
+    </figure>
+
+    <figure class="mix work-item branding">
+        <img src="/images/works/item-4.jpg" alt="branding">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-4.jpg"><i
+                    class="fa-solid fa-face-smile fa-lg"></i></a>
+            <h4>Client</h4>
+            <p>Proyecto Musical Teleion</p>
+        </figcaption>
+    </figure>
+    <figure class="mix work-item branding">
+        <img src="/images/works/item-5.jpg" alt="branding">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-5.jpg"><i
+                    class="fa-solid fa-face-smile fa-lg"></i></a>
+            <h4>Client</h4>
+            <p>Bar in Puerto Madero</p>
+        </figcaption>
+    </figure>
+
+    <figure class="mix work-item branding">
+        <img src="/images/works/item-6.jpg" alt="branding">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-6.jpg"><i
+                    class="fa-solid fa-face-smile fa-lg"></i></a>
+            <h4>Contest</h4>
+            <p>Desarrollo Emprendedor</p>
+        </figcaption>
+    </figure>
+
+    <figure class="mix work-item branding">
+        <img src="/images/works/item-7.jpg" alt="branding">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-7.jpg"><i
+                    class="fa-solid fa-face-smile fa-lg"></i></a>
+            <h4>Several Logos</h4>
+            <p></p>
+        </figcaption>
+    </figure>
+
+    <figure class="mix work-item branding">
+        <img src="/images/works/item-8.jpg" alt="branding">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-8.jpg"><i
+                    class="fa-solid fa-face-smile fa-lg"></i></a>
+            <h4>Several Logos</h4>
+            <p></p>
+        </figcaption>
+    </figure>
+    <figure class="mix work-item illustration">
+        <img src="/images/works/item-9.jpg" alt="">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-9.jpg"><i
+                    class="fa-solid fa-star"></i></a>
+            <h4>Meditating Fox</h4>
+            <p>Vector Illustration</p>
+        </figcaption>
+    </figure>
+
+    <figure class="mix work-item illustration">
+        <img src="/images/works/item-10.jpg" alt="illustration vector">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-10.jpg"><i
+                    class="fa-solid fa-star"></i></a>
+            <h4>Shiva</h4>
+            <p>Vector Illustration</p>
+        </figcaption>
+    </figure>
+
+    <figure class="mix work-item illustration">
+        <img src="/images/works/item-11.jpg" alt="illustration vector">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-11.jpg"><i
+                    class="fa-solid fa-star"></i></a>
+            <h4>Ganesha</h4>
+            <p>Vector Illustration</p>
+        </figcaption>
+    </figure>
+
+    <figure class="mix work-item illustration">
+        <img src="/images/works/item-12.jpg" alt="illustration vector">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-12.jpg"><i
+                    class="fa-solid fa-star"></i></a>
+            <h4>Vampiress</h4>
+            <p>Vector Illustration</p>
+        </figcaption>
+    </figure>
+
+    <figure class="mix work-item illustration">
+        <img src="/images/works/item-13.jpg" alt="illustration vector">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-13.jpg"><i
+                    class="fa-solid fa-star"></i></a>
+            <h4>Blade Runner</h4>
+            <p>Vector Illustration</p>
+        </figcaption>
+    </figure>
+
+    <figure class="mix work-item illustration">
+        <img src="/images/works/item-14.jpg" alt="illustration vector">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-14.jpg"><i
+                    class="fa-solid fa-star"></i></a>
+            <h4>Kawai Cat</h4>
+            <p>Vector Illustration</p>
+        </figcaption>
+    </figure>
+
+    <figure class="mix work-item illustration">
+        <img src="/images/works/item-15.jpg" alt="illustration vector">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-15.jpg"><i
+                    class="fa-solid fa-star"></i></a>
+            <h4>Cherry Pink</h4>
+            <p>Vector Illustration</p>
+        </figcaption>
+    </figure>
+
+     <figure class="mix work-item illustration">
+        <img src="/images/works/item-16.jpg" alt="illustration vector">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-16.jpg"><i
+                    class="fa-solid fa-star"></i></a>
+            <h4>Chori Cat</h4>
+            <p>Vector Illustration</p>
+        </figcaption>
+    </figure>
+ <figure class="mix work-item illustration">
+        <img src="/images/works/item-17.jpg" alt="illustration vector">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-17.jpg"><i
+                    class="fa-solid fa-star"></i></a>
+            <h4>Le Coq</h4>
+            <p>Vector Illustration</p>
+        </figcaption>
+    </figure>
+ <figure class="mix work-item illustration">
+        <img src="/images/works/item-18.jpg" alt="illustration vector">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-18.jpg"><i
+                    class="fa-solid fa-star"></i></a>
+            <h4>Wolf</h4>
+            <p>Vector Illustration</p>
+        </figcaption>
+    </figure>
+
+    <figure class="mix work-item illustration">
+        <img src="/images/works/item-19.jpg" alt="illustration vector">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-19.jpg"><i
+                    class="fa-solid fa-star"></i></a>
+            <h4>Deer</h4>
+            <p>Vector Illustration</p>
+        </figcaption>
+    </figure>
+
+ <figure class="mix work-item illustration">
+        <img src="/images/works/item-20.jpg" alt="illustration vector">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-20.jpg"><i
+                    class="fa-solid fa-star"></i></a>
+            <h4>Pin Up Babe</h4>
+            <p>Vector Illustration</p>
+        </figcaption>
+    </figure>
+
+    <figure class="mix work-item illustration">
+        <img src="/images/works/item-21.jpg" alt="illustration vector">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-21.jpg"><i
+                    class="fa-solid fa-star"></i></a>
+            <h4>Gummy Bear</h4>
+            <p>Vector Illustration</p>
+        </figcaption>
+    </figure>
+
+    <figure class="mix work-item illustration">
+        <img src="/images/works/item-22.jpg" alt="illustration vector">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-22.jpg"><i
+                    class="fa-solid fa-star"></i></a>
+            <h4>Rat on Fire</h4>
+            <p>Vector Illustration</p>
+        </figcaption>
+    </figure>
+
+    <figure class="mix work-item illustration">
+        <img src="/images/works/item-23.jpg" alt="illustration vector">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-23.jpg"><i
+                    class="fa-solid fa-star"></i></a>
+            <h4>X GIRL</h4>
+            <p>Vector Illustration</p>
+        </figcaption>
+    </figure>
+
+    <figure class="mix work-item illustration">
+        <img src="/images/works/item-24.jpg" alt="illustration vector">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-24.jpg"><i
+                    class="fa-solid fa-star"></i></a>
+            <h4>X CAT</h4>
+            <p>Vector Illustration</p>
+        </figcaption>
+    </figure>
+
+    <figure class="mix work-item ai">
+        <img src="/images/works/item-25.jpg" alt="ai midjourney v5">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-25.jpg"><i
+                    class="fa-solid fa-robot"></i></a>
+            <h4>Midjourney</h4>
+            <p>AI</p>
+        </figcaption>
+    </figure>
+
+    <figure class="mix work-item ai">
+        <img src="/images/works/item-26.jpg" alt="ai midjourney v5">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-26.jpg"><i class="fa-solid fa-robot"></i></a>
+            <h4>Midjourney</h4>
+            <p>AI</p>
+        </figcaption>
+    </figure>
+
+    <figure class="mix work-item ai">
+        <img src="/images/works/item-27.jpg" alt="ai midjourney v5">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-27.jpg"><i class="fa-solid fa-robot"></i></a>
+            <h4>Midjourney</h4>
+            <p>AI</p>
+        </figcaption>
+    </figure>
+    <figure class="mix work-item ai">
+        <img src="/images/works/item-28.jpg" alt="ai midjourney v5">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-28.jpg"><i class="fa-solid fa-robot"></i></a>
+            <h4>Midjourney</h4>
+            <p>AI</p>
+        </figcaption>
+    </figure>
+    <figure class="mix work-item ai">
+        <img src="/images/works/item-29.jpg" alt="ai midjourney v5">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-29.jpg"><i class="fa-solid fa-robot"></i></a>
+            <h4>Midjourney</h4>
+            <p>AI</p>
+        </figcaption>
+    </figure>
+    <figure class="mix work-item ai">
+        <img src="/images/works/item-30.jpg" alt="ai midjourney v5">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-30.jpg"><i class="fa-solid fa-robot"></i></a>
+            <h4>Midjourney</h4>
+            <p>AI</p>
+        </figcaption>
+    </figure>
+
+    <figure class="mix work-item ai">
+        <img src="/images/works/item-31.jpg" alt="ai midjourney v5">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-31.jpg"><i
+                    class="fa-solid fa-robot"></i></a>
+            <h4>Midjourney</h4>
+            <p>AI</p>
+        </figcaption>
+    </figure>
+
+    <figure class="mix work-item ai">
+        <img src="/images/works/item-32.jpg" alt="ai midjourney v5">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-32.jpg"><i
+                    class="fa-solid fa-robot"></i></a>
+            <h4>Midjourney</h4>
+            <p>AI</p>
+        </figcaption>
+    </figure>
+
+    </figure>
+    <figure class="mix work-item ai">
+        <img src="/images/works/item-33.jpg" alt="ai midjourney v5">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-33.jpg"><i
+                    class="fa-solid fa-robot"></i></a>
+            <h4>Midjourney</h4>
+            <p>AI</p>
+        </figcaption>
+    </figure>
+    <figure class="mix work-item ai">
+        <img src="/images/works/item-34.jpg" alt="ai midjourney v5">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-34.jpg"><i
+                    class="fa-solid fa-robot"></i></a>
+            <h4>Midjourney</h4>
+            <p>AI</p>
+        </figcaption>
+    </figure>
+
+    <figure class="mix work-item ai">
+        <img src="/images/works/item-35.jpg" alt="ai midjourney v5">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-35.jpg"><i
+                    class="fa-solid fa-robot"></i></a>
+            <h4>Midjourney</h4>
+            <p>AI</p>
+        </figcaption>
+    </figure>
+
+    <figure class="mix work-item ai">
+        <img src="/images/works/item-36.jpg" alt="ai midjourney v5">
+        <figcaption class="overlay">
+            <a class="fancybox" rel="works" title="" href="/images/works/item-36.jpg"><i
+                    class="fa-solid fa-robot"></i></a>
+            <h4>Midjourney</h4>
+            <p>AI</p>
+        </figcaption>
+    </figure>
+</div>
+</section>
+<!--
+    End Porfolio
+        ==================================== -->
+<!--
+        Contact
+        ==================================== -->
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="row mb50">
+            <div class="sec-title text-center">
+                <h1>Contacto</h1>
+            </div>
+            <div class="sec-sub-title text-center">
+            </div>
+            <!-- contact address -->
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 wow fadeInLeft animated" data-wow-duration="2s">
+                <div class="contact-address">
+                    <h3>Flor Paramidani</h3>
+                    <h4>Diseñador Gráfico</h4>
+                    <h4>Frontend Developer</h4>
+                    <h4>Buenos Aires, Argentina</h4>
+                    <h4>florparamidani@gmail.com</h4>
+                </div>
+            </div>
+            <!-- end contact address -->
+
+            <!-- contact form -->
+            <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+                <div class="contact-form">
+                    <h3>Dudas, consultas? Dejame un mensaje y lo responderé a la brevedad:</h3>
+                    <form action="/" method="post">
+                        <div class="input-group name-email">
+                            <div class="input-field">
+                                <input type="text" id="name" name="name" placeholder="name" class="form-control">
+                            </div>
+                            <div class="input-field">
+                                <input type="email" id="email" name="email" placeholder="email" class="form-control">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <textarea id="message" name="message" placeholder="message" class="form-control"></textarea>
+                        </div>
+                        <div class="input-group">
+                            <input type="submit" id="form-submit" class="pull-right" value="Send message">
+                        </div>
+                    </form>
+                    <p>{{message}}</p>
+                </div>
+            </div>
+            <!-- end contact form -->
+
+            <!-- footer social links -->
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12 wow fadeInRight animated" data-wow-duration="500ms"
+                data-wow-delay="600ms">
+                <ul class="footer-social">
+                    <li><a href="https://twitter.com/ParamidaniFlor"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/florpdg/"><i class="fa-brands fa-instagram"></i></a></li>
+
+                </ul>
+            </div>
+            <!-- end footer social links -->
+
+        </div>
+    </div>
+</section>
